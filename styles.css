@@ -125,7 +125,7 @@ body {
   /* General styles for the main section */
 .main-section {
     position: relative;
-    padding: 20px;
+    padding-top: 20px;
     font-family: Arial, sans-serif;
     color: #000;
   }
@@ -283,9 +283,12 @@ body {
     background-color: #1f2365;
     color: white;
     padding: 30px 20px;
-    width: 100vw;
     margin-top: 50px;
     font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 }
 
 .footer-container {
@@ -293,6 +296,9 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    width: 100%; /* Ensure it spans full width */
+    max-width: 1200px; /* Center content */
+    margin: 0 auto; /* Centering */
 }
 
 .footer-left, .footer-center, .footer-right, .footer-apps {
