@@ -1,10 +1,24 @@
 /* General Styles */
+:root {
+  --scale-factor: 1; /* Default scaling factor */
+}
 body {
     margin: 0;
     padding-top: 60px; /* Adjust based on your navbar height */
     font-family: Arial, sans-serif;
   }
   
+.main-section > *:not(.background), 
+.steps-to-vote img, 
+.cast-vote img, 
+.board-members img {
+  transform: scale(var(--scale-factor));
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+footer {
+  transform: none !important;
+}
   .navbar {
     position: fixed;
     top: 0;
@@ -92,7 +106,7 @@ body {
   .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 0;
     background-color: white;
     color: black;
@@ -363,7 +377,141 @@ body {
     padding-top: 10px;
 }
 
+/* Position and style for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-  
-  
+.dropdown-menu {
+  display: none;  /* Initially hidden */
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown when hovering over the button or the menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle:focus + .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Default styles */
+.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+/* Apply only to main-section */
+.main-section.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+/* Ensure links are readable */
+.main-section.high-contrast a {
+  color: yellow !important;
+  text-decoration: underline;
+}
+
+/* Optional: Button styles in high contrast mode */
+.button.high-contrast {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+/* Note Section */
+.note-section {
+  background-color: #2c3e50; /* Dark blue background */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  height: auto;  /* Adjust height based on content */
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.note-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* High contrast mode for note section */
+.note-section.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.note-section.high-contrast p {
+  color: yellow !important;
+}
+
+/* High contrast mode for main section */
+.main-section.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+/* High contrast mode for note section */
+.note-section.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+/* High contrast mode for main section */
+.main-section.high-contrast {
+  color: yellow !important;
+}
+
+/* High contrast mode for note section */
+.note-section.high-contrast {
+  color: yellow !important;
+}
+
+/* High contrast mode for footer-left section */
+.footer-left.high-contrast {
+  color: yellow !important; /* Text color turns yellow */
+  background-color: transparent !important; /* No background change */
+}
+
+/* Optional: If you want to ensure that the text inside paragraphs in footer-left also turns yellow */
+.footer-left.high-contrast p {
+  color: yellow !important;
+}
+
+/* Ensure that links within the footer-left section are also visible */
+.footer-left.high-contrast a {
+  color: yellow !important;
+  text-decoration: underline;
+}
+
+
   
