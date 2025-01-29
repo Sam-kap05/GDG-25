@@ -21,9 +21,9 @@
         <span class="material-icons">home</span>
         Home
       </button>
-      <button class="button">Skip to Main</button>
+      <button class="button" id="skip_button">Skip to Main</button>
 
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <button class="button dropdown-toggle" data-dropdown="translate-dropdown">Translate</button>
         <ul class="dropdown-menu" id="translate-dropdown">
           <li>English</li>
@@ -32,17 +32,19 @@
           <li>தமிழ்</li>
           <li>తెలుగు</li>
         </ul>
-      </div>
+      </div> -->
+      <div id="google_translate_element"></div>
+
       
       <div class="dropdown">
         <button class="button dropdown-toggle" data-dropdown="assist-dropdown">
           <span class="material-icons">accessibility</span>
         </button>
         <ul class="dropdown-menu" id="assist-dropdown">
-          <li>A+</li>
-          <li>A</li>
-          <li>A-</li>
-          <li style="color: #FFFF00; background-color: #000000; text-decoration: underline;">A</li> 
+          <li id="increase-size">A+</li>
+          <li id="reset-size">A</li>
+          <li id="decrease-size">A-</li>
+          <li style="color: #FFFF00; background-color: #000000; text-decoration: underline;" class="high-contrast" id="high-contrast">A</li> 
         </ul>
       </div>
       
@@ -66,12 +68,12 @@
     
         <!-- Steps to Vote Section -->
         <div class="steps-to-vote">
-          <img src="./White and Blue Professional Modern Technology Pitch Deck Presentation (1).jpg" alt="Steps to Vote Online" />
+        <img src="./White and Blue Professional Modern Technology Pitch Deck Presentation (1).jpg" alt="Steps to Vote Online" />
         </div>
     </div>
   
     <!-- Link to Video Demonstration -->
-    <div class="video-link">
+    <div class="video-link" id="main_content">
       <a href="https://www.youtube.com" target="_blank">LINK TO VIDEO DEMONSTRATION</a>
     </div>
   
@@ -113,15 +115,15 @@
           <div class="footer-right">
               <h3>Quick Links</h3>
               <ul>
-                  <li><a href="https://www.eci.gov.in/about-eci" target="_blank">About ECI</a></li>
-                  <li><a href="./homepage.html" target="_blank">Contact Us</a></li>
-                  <li><a href="./homepage.html">Public Grievance</a></li>
-                  <li><a href="https://www.eci.gov.in/" target="_blank">eOffice</a></li>
-                  <li><a href="https://voterportal.eci.gov.in/" target="_blank">Apply for Voter Card</a></li>
-                  <li><a href="https://voterportal.eci.gov.in/download-e-epic-test" target="_blank">Download EPIC Card</a></li>
-                  <li><a href="https://www.eci.gov.in/cvigil-app" target="_blank">Download cVIGIL</a></li>
-                  <li><a href="https://www.eci.gov.in/affidavit-portal" target="_blank">Candidate Affidavits</a></li>
-                  <li><a href="https://apaar.education.gov.in/" target="_blank">APAR</a></li>
+                  <li><a href="https://www.eci.gov.in/about-eci">About ECI</a></li>
+                  <li><a href="./homepage.html">Contact Us</a></li>
+                  <li><a href="">Public Grievance</a></li>
+                  <li><a href="https://www.eci.gov.in/">eOffice</a></li>
+                  <li><a href="https://voterportal.eci.gov.in/">Apply for Voter Card</a></li>
+                  <li><a href="https://voterportal.eci.gov.in/download-e-epic-test">Download EPIC Card</a></li>
+                  <li><a href="https://www.eci.gov.in/cvigil-app">Download cVIGIL</a></li>
+                  <li><a href="https://www.eci.gov.in/affidavit-portal">Candidate Affidavits</a></li>
+                  <li><a href="https://apaar.education.gov.in/">APAR</a></li>
               </ul>
           </div>
   
@@ -129,13 +131,12 @@
           <div class="footer-apps">
               <h3>ECI Apps Links</h3>
               <div class="app-icons">
-                  <a href="https://www.eci.gov.in/ict-app" target="_blank"><img src="./Screenshot_2025-01-25_220324-removebg-preview.png" alt="Voter App">
+                  <img src="./Screenshot_2025-01-25_220324-removebg-preview.png" alt="Voter App">
               </div>
           </div>
       </div>
   </footer>
-  
-      
-  
+<script src="homepage.js" defer></script>
+<script src="translate.js" defer></script>
 </body>
 </html>
