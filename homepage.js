@@ -79,3 +79,14 @@ contrastToggle.addEventListener('click', () => {
   noteSection.classList.toggle('high-contrast');
   footerLeft.classList.toggle('high-contrast'); // Add high-contrast class to footer-left
 });
+
+// Get elements
+const sendOtpBtn = document.getElementById('sendOtpBtn');
+const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+const successMessage = document.getElementById('successMessage');
+
+// Handle "Send OTP" button click
+sendOtpBtn.addEventListener('click', function () {
+    successMessage.classList.add('visible'); // Show success message
+    verifyOtpBtn.style.display = 'block'; // Show "Verify OTP" button
+});
